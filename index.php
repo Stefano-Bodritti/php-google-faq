@@ -68,12 +68,12 @@ $faq = [
   </head>
   <body>
     <div class="container">
-      <?php foreach ($faq as $key => $value) { ?>
-        <h3><?php echo $value["domanda"] ?></h3>
-        <?php foreach ($value["risposta"] as $risposta) { ?>
-          <p><?php echo $risposta ?></p>
-        <?php } ?>
-      <?php } ?>
+      <?php foreach ($faq as $key => $value) { 
+        echo '<h3>' . $value["domanda"] . '</h3>';
+        foreach ($value["risposta"] as $risposta) { 
+          echo '<p>' . $risposta . '</p>';
+        }
+      } ?>
     </div>
   </body>
 </html>
