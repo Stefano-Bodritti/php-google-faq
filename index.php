@@ -67,13 +67,30 @@ $faq = [
     <title>Google FAQ</title>
   </head>
   <body>
-    <div class="container">
-      <?php foreach ($faq as $key => $value) { 
-        echo '<h3>' . $value["domanda"] . '</h3>';
-        foreach ($value["risposta"] as $risposta) { 
-          echo '<p>' . $risposta . '</p>';
-        }
-      } ?>
-    </div>
+    <header>
+      <div class="header_top">
+        <img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" alt="Logo Google">
+        <h1><a href="#">Privacy e termini</a></h1>
+      </div>
+      <div class="header_bottom">
+        <ul>
+          <li><a href="#">Introduzione</a></li>
+          <li><a href="#">Norme sulla privacy</a></li>
+          <li><a href="#">Termini di servizio</a></li>
+          <li><a href="#">Tecnologie</a></li>
+          <li><a class="active" href="#">Domande frequenti</a></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <?php foreach ($faq as $key => $value) { 
+          echo '<h3>' . $value["domanda"] . '</h3>';
+          foreach ($value["risposta"] as $risposta) { 
+            echo '<p>' . $risposta . '</p>';
+          }
+        } ?>
+      </div>
+    </main>
   </body>
 </html>
